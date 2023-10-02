@@ -1,0 +1,69 @@
+main.index {
+    height: calc(100vh - 56px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main.index:before, main.index:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+main.index:before {
+    background-image: url("../images/steve-johnson-ZPOoDQc8yMw-unsplash.jpg");
+    z-index: -2;
+}
+
+main.index:after {
+    z-index: -1;
+    opacity: 0.4;
+    background-color: black;
+}
+
+.index-title {
+    font-size: 172px;
+}
+
+.index-title > span {
+    background: linear-gradient(white, #2048ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.index-motivation-text {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 990px) {
+    .index-title {
+        font-size: 94px;
+    }
+
+    .container-fluid  {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 32px;
+    }
+
+    main.index:before, main.index:after {
+        bottom: 0;
+    }
+}
